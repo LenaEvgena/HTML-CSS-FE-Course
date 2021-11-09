@@ -204,6 +204,8 @@ h1 {
 h1 > span {
   color: var(--pink-color);
   text-shadow: 4px 4px 6px rgb(76, 75, 72);
+  font-size: 4rem;
+  font-weight: 400;
 }
 
 h3 > span {
@@ -240,12 +242,8 @@ a:hover {
   cursor: pointer;
 }
 
-a {
-  /* margin-left: 5px; */
-}
-
 section {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .wrapper {
@@ -365,25 +363,15 @@ li > p, a {
 
 .code {
   overflow: hidden;
+  position: relative;
 }
 
 pre {
-  position: relative;
   display: flex;
-  /* flex-wrap: wrap; */
   align-items: center;
-  justify-content: center;
-  height: 20rem;
-  border-radius: 8px;
-  background-color: var(--light-gray-color);
+  justify-content: start;
   font-size: 1.5rem;
   line-height: 1.2;
-}
-
-code {
-  height: 80%;
-  padding: 5px;
-  border-radius: 10px;
 }
 
 .example {
@@ -598,7 +586,6 @@ footer a, p {
 }
 
 #burger {
-  display: none;
   position: absolute;
   top: 20px;
   right: 20px;
@@ -667,22 +654,12 @@ hr {
 }
 
 @media only screen and (max-width: 1024px) {
-  .header {
-    display: none;
-  }
   .wrapper {
     grid-template-columns: repeat(1, 1fr);
     grid-template-areas:
       "m"
       "f";
-    width: 75%;
-  }
-  #burger {
-    display: block;
-  }
-  ::-webkit-scrollbar {
-    width: 0;
-    background: 0 0;
+    width: 90%;
   }
 }
 
@@ -709,11 +686,13 @@ hr {
     padding: 10px;
   }
 }
+
 @media only screen and (max-width: 650px) {
   html {
     font-size: 8px;
   }
 }
+
 @media only screen and (max-width: 500px) {
   ::-webkit-scrollbar {
     width: 0;
@@ -724,7 +703,7 @@ hr {
   }
   .wrapper {
     width: 95%;
-    margin: 20px auto;
+    margin: 10px auto;
     border-radius: 5px;
   }
   #project {
@@ -734,6 +713,7 @@ hr {
       "i";
   }
 }
+
 @media only screen and (max-width: 360px) {
   html {
     font-size: 6px;
