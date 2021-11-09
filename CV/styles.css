@@ -60,10 +60,9 @@ html, body {
   font-family: 'Poppins', sans-serif;
 	}
 html {
-	font-size: 1em;
+	font-size: 10px;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  /* overflow-x: hidden; */
 }
 a img, :link img, :visited img {
 	border: 0;
@@ -197,7 +196,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 400;
   text-shadow: 4px 4px 6px rgb(76, 75, 72);
 }
@@ -213,26 +212,26 @@ h3 > span {
 }
 
 h2, h3 {
-  font-size: 1.5rem;
+  font-size: 2.6rem;
   font-weight: 300;
   padding: 3px;
 }
 
 h4 {
-  font-size: 1.2rem;
+  font-size: 2.2rem;
   font-weight: 300;
   padding: 3px;
 }
 
 h6 {
-  font-size: 0.98rem;
+  font-size: 1.3rem;
   font-weight: 300;
   padding: 3px;
 }
 
 li, li > p, a {
   color: var(--dark-gray-color);
-  font-size: 0.9rem;
+  font-size: 1.5rem;
   text-decoration: none;
   align-items: center;
 }
@@ -250,12 +249,12 @@ section {
 }
 
 .wrapper {
-  position: relative;
   display: grid;
-  grid-template-columns: auto 130px;
+  grid-template-columns: repeat(1, 1fr);;
   grid-template-areas:
-    "m h"
-    "f f";
+    "h"
+    "m"
+    "f";
   width: 80%;
   margin: 20px auto;
   border-radius: 5px;
@@ -371,13 +370,13 @@ li > p, a {
 pre {
   position: relative;
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   align-items: center;
   justify-content: center;
-  height: 200px;
+  height: 20rem;
   border-radius: 8px;
   background-color: var(--light-gray-color);
-  font-size: 0.75rem;
+  font-size: 1.5rem;
   line-height: 1.2;
 }
 
@@ -391,7 +390,7 @@ code {
   position: relative;
   border-radius: 8px;
   background-color: var(--light-gray-color);
-  font-size: 1rem;
+  font-size: 1.5rem;
   line-height: 1.2;
   overflow: hidden;
 }
@@ -497,7 +496,7 @@ footer {
 
 footer a, p {
   align-items: center;
-  font-size: 0.8rem;
+  font-size: 1.5rem;
 }
 
 #myGit {
@@ -505,16 +504,25 @@ footer a, p {
 }
 
 /*main menu*/
-.header {
+/* .header {
   grid-area: h;
-  position: relative;
-  display: flex;
-  /* height: 100px; */
+  position: sticky;
+  top: 0;
+  left: 0;
+  transform: translateX(-50%);
+  height: 125px;
+  width: 100%;
 }
 
 .menu__main {
-  position: fixed;
   margin-top: 20px;
+}
+
+.menu__main ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
 }
 
 .menu__main-item {
@@ -535,7 +543,7 @@ footer a, p {
   width: 50px;
   height: 50px;
   background: linear-gradient(145deg, #fff, #d8d8d8);
-  box-shadow: 6px 6px 12px #ccc, -6px -6px 12px #fff;
+  box-shadow: 6px 6px 12px #ccc;
   border-radius: 50%;
   transition: all 300ms;
   margin-bottom: 15px;
@@ -570,7 +578,7 @@ footer a, p {
 
 .menu__main-link:active + .menu__main-descr {
   color: var(--pink-color);
-}
+} */
 
 /*burger*/
 .overlay {
@@ -612,7 +620,6 @@ footer a, p {
   right: -320px;
   z-index: 9;
   width: 300px;
-  /* height: 99%; */
   border-radius: 10px;
   background-color: var(--pink-color);
   opacity: .9;
@@ -650,7 +657,7 @@ hr {
 }
 
 .link {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   border-bottom: 2px solid var(--pink-color);
 }
 
@@ -702,24 +709,33 @@ hr {
     padding: 10px;
   }
 }
-
-@media only screen and (max-width: 500px) {
-  .wrapper {
-    width: 95%;
-    margin: 20px auto;
-    border-radius: 5px;
+@media only screen and (max-width: 650px) {
+  html {
+    font-size: 8px;
   }
+}
+@media only screen and (max-width: 500px) {
   ::-webkit-scrollbar {
     width: 0;
     background: 0 0;
   }
-  :root {
-    font-size: 12px;
+  html {
+    font-size: 7px;
+  }
+  .wrapper {
+    width: 95%;
+    margin: 20px auto;
+    border-radius: 5px;
   }
   #project {
     grid-template-columns: repeat(1, 1fr);
     grid-template-areas:
       "t"
       "i";
+  }
+}
+@media only screen and (max-width: 360px) {
+  html {
+    font-size: 6px;
   }
 }
