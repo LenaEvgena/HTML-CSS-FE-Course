@@ -272,14 +272,13 @@ section {
   text-transform: uppercase;
   line-height: 1.5;
   padding: 20px;
-  margin-bottom: 10px;
   border-bottom: 10px solid var(--super-light-color);
 }
 
 .my_img {
   width: 230px;
   border-radius: 50px 2px;
-  filter: drop-shadow(4px 6px 6px rgb(76, 75, 72));
+  filter: drop-shadow(4px 4px 4px rgb(117, 117, 117));
   margin: 15px;
 }
 
@@ -294,7 +293,8 @@ section {
 
 .left h3, .right h3 {
   width: 70%;
-  border-radius: 15px 15px 2px 2px;
+  border-radius: 3px;
+  /* border-radius: 15px 15px 2px 2px; */
   text-align: center;
   filter: drop-shadow(3px 4px 3px rgba(134, 134, 134, 0.753));
   margin: 0px 10px 10px 0px;
@@ -496,12 +496,8 @@ footer a, p {
 /*main menu*/
 .header {
   grid-area: h;
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: var(--light-gray-color);
   width: 100%;
+  background-color: var(--light-gray-color);
 }
 
 .menu__main {
@@ -509,15 +505,16 @@ footer a, p {
   align-items: center;
   justify-content: space-between;
   background-color: var(--light-gray-color);
+  box-shadow: 0px 2px 8px rgba(134, 134, 134, 0.753);
   padding: 20px;
 }
 
 .about_link {
   width: 10%;
 }
+
 .menu__main ul {
   display: flex;
-  /* width: 80%; */
   align-items: center;
   justify-content: space-between;
 }
@@ -538,8 +535,8 @@ footer a, p {
   width: 90px;
   height: 40px;
   background: linear-gradient(145deg, #fff, #d8d8d8);
-  box-shadow: 6px 6px 12px #ccc;
-  border-radius: 15px;
+  box-shadow: 6px 6px 12px rgb(189, 189, 189);
+  border-radius: 8px;
   transition: all 300ms;
 }
 
@@ -644,6 +641,24 @@ hr {
   border-bottom: 2px solid var(--dark-gray-color);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media only screen and (max-width: 1230px) {
   #burger {
     display: block;
@@ -720,5 +735,8 @@ hr {
 @media only screen and (max-width: 360px) {
   html {
     font-size: 6px;
+  }
+  .git {
+    display: none;
   }
 }
