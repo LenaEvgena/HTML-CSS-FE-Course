@@ -225,10 +225,10 @@ h4 {
   padding: 3px;
 }
 
-h6 {
-  font-size: 1.3rem;
+h5 {
+  font-size: 1.7rem;
   font-weight: 300;
-  padding: 3px;
+  padding: 5px;
 }
 
 li, li > p, a {
@@ -294,7 +294,6 @@ section {
 .left h3, .right h3 {
   width: 70%;
   border-radius: 3px;
-  /* border-radius: 15px 15px 2px 2px; */
   text-align: center;
   filter: drop-shadow(3px 4px 3px rgba(134, 134, 134, 0.753));
   margin: 0px 10px 10px 0px;
@@ -305,7 +304,7 @@ section {
 }
 
 .right h3 {
-  background-color: var(--pink-color);
+  background: linear-gradient(100deg, var(--super-light-color), var(--pink-color));
 }
 
 .left, .right {
@@ -315,7 +314,7 @@ section {
 
 .left {
   grid-area: l;
-  background-color: var(--pink-color);
+  background: linear-gradient(100deg, var(--super-light-color), var(--pink-color));
 }
 
 .content {
@@ -376,45 +375,120 @@ pre {
   line-height: 1.2;
 }
 
+/* projects */
+.container {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "a a"
+    "b c"
+    "d e";
+  grid-gap: 15px;
+}
+
+.project1 {
+  grid-area: a;
+  height: 95%;
+}
+
+.project2 {
+  grid-area: b;
+}
+
+.project3 {
+  grid-area: c;
+}
+
+.project4 {
+  grid-area: d;
+}
+
+.project5 {
+  grid-area: e;
+}
+
 .example {
   position: relative;
-  border-radius: 8px;
-  background-color: var(--light-gray-color);
-  font-size: 1.5rem;
-  line-height: 1.2;
+  background: var(--pink-color);
+  border-radius: 0.5rem;
+  border: 2px solid var(--pink-color);
   overflow: hidden;
 }
 
-#project {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-areas:
-    "i t"
-    "i t";
-  align-items: center;
-  justify-content: center;
-  height: 200px;
+img {
+  width: 100%;
+  display: block;
 }
 
-.project {
-  grid-area: i;
-  display: flex;
-  align-self: center;
-  justify-self: center;
-  position: relative;
-  padding: 10px;
-  height: 110px;
-  border-radius: 20px;
-  filter: opacity(70%);
+.project_img {
+  transition: all 0.3s linear;
+  border-radius: 0.5rem;
+  height: 23rem;
+  object-fit: cover;
 }
 
 .project_content {
-  grid-area: t;
-  padding: 5px;
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  justify-self: center;
+  text-align: center;
+  color: var(--dark-gray-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  transition: all 0.3s linear;
+  opacity: 0;
+}
+
+.project_content p, h5 {
+  text-transform: capitalize;
+  color: var(--dark-gray-color);
+}
+
+.project_content:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0.3rem solid var(--dark-gray-color);
+  border-radius: 0.5rem;
+  transition: all .3s linear;
+  opacity: 0;
+}
+
+.projects-text {
+  width: 85vw;
+  max-width: 30rem;
+  margin: 0 auto;
+}
+
+.example:hover .project_content {
+  opacity: 1;
+}
+
+.example:hover .project_img {
+  opacity: 0.1;
+}
+
+.example::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0.3rem solid var(--dark-gray-color);
+  border-radius: 0.5rem;
+  transition: all 0.3s linear;
+  opacity: 0;
+}
+
+.example:hover::after {
+  opacity: 1;
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
 }
 
 .bar {
@@ -621,7 +695,7 @@ hr {
 }
 
 .menu_content {
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 .menu_item {
@@ -676,6 +750,16 @@ hr {
       "f";
     width: 90%;
   }
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas:
+      "a"
+      "c"
+      "b"
+      "d"
+      "e";
+    grid-gap: 10px;
+  }
 }
 
 @media only screen and (max-width: 950px) {
@@ -716,8 +800,14 @@ hr {
   html {
     font-size: 7px;
   }
+  h5 {
+    font-size: 2.2rem;
+  }
   li, li > p, a, p {
-    font-size: 2rem;
+    font-size: 1.9rem;
+  }
+  .link {
+    font-size: 2.2rem;
   }
   .wrapper {
     width: 95%;
@@ -732,7 +822,7 @@ hr {
   }
 }
 
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 400px) {
   html {
     font-size: 6px;
   }
