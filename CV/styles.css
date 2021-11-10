@@ -828,6 +828,7 @@ hr {
   flex-direction: row;
   align-items: center;
   padding-top: 10px;
+  min-height: 100px;
 }
 
 .education .timeline-date {
@@ -880,7 +881,7 @@ hr {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding-top: 10px;
+  min-height: 100px;
 }
 
 .work .timeline-date {
