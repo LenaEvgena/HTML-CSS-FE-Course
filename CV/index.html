@@ -214,27 +214,29 @@
       <div class="right">
         <section class="about" id="about">
           <h3>About me</h3>
-          <p>Hi, I'm Lena. I am here to learn new things) I am responsible, diligent and efficient, I can solve any problems and understand any task.
-            I am great at working in a team, and also I'm not afraid of a huge amount of tasks.
-            I graduated from the university with a degree in finance, all this time I've been working in
-            a large bank as an economist. But it's time to expand horizons and set new goals.</p>
-          <p>From an early age I was interested in mathematics, foreign languages, and computer science. So I've started
-            to study programming with courses and trainings. And I really liked it.</p>
-          <p>Development is a chance to learn new things, to train my brain)) Here there are endless possibilities
-            to improve your skills, as well as numerous abilities for self-education and for the further professional growth.</p>
-          <p>I want to be part of a large and friendly team of developers) I believe that my ability to learn
-            new things and learn it very quickly will allow me to become an excellent developer.</p>
+          <div class="about_content">
+            <p>Hi, I'm Lena. I am here to learn new things) I am responsible, diligent and efficient, I can solve any problems and understand any task.
+              I am great at working in a team, and also I'm not afraid of a huge amount of tasks.
+              I graduated from the university with a degree in finance, all this time I've been working in
+              a large bank as an economist. But it's time to expand horizons and set new goals.</p>
+            <p>From an early age I was interested in mathematics, foreign languages, and computer science. So I've started
+              to study programming with courses and trainings. And I really liked it.</p>
+            <p>Development is a chance to learn new things, to train my brain)) Here there are endless possibilities
+              to improve your skills, as well as numerous abilities for self-education and for the further professional growth.</p>
+            <p>I want to be part of a large and friendly team of developers) I believe that my ability to learn
+              new things and learn it very quickly will allow me to become an excellent developer.</p>
+          </div>
         </section>
         <section class="work" id="work">
           <h3>Work Experience</h3>
           <div class="timeline">
             <div class="timeline-item">
               <div class="timeline-date">
-                <p>2009 – 2021</p>
+                <p>April 2009 – December 2021</p>
               </div>
               <div class="point"></div>
               <div class="timeline-description">
-                <p>JSC BAPB</p>
+                <h6>JSC BAPB</h6>
                 <p>economist</p>
               </div>
             </div>
@@ -249,8 +251,8 @@
               </div>
               <div class="point"></div>
               <div class="timeline-description">
-                <p>The Rolling Scopes School</p>
-                <p>JavaScript / Front-end 2021Q3</p>
+                <h6>The Rolling Scopes School</h6>
+                <p>JS/FE 2021Q3</p>
               </div>
             </div>
             <div class="timeline-item">
@@ -259,7 +261,7 @@
               </div>
               <div class="point"></div>
               <div class="timeline-description">
-                <p>Educational center of HTP "IT Academy"</p>
+                <h6>Educational center of HTP "IT Academy"</h6>
                 <p>Web Application Development With Javascript</p>
               </div>
             </div>
@@ -269,8 +271,8 @@
               </div>
               <div class="point"></div>
               <div class="timeline-description">
-                <p>The Rolling Scopes School</p>
-                <p>JavaScript / Front-end 2020Q3</p>
+                <h6>The Rolling Scopes School</h6>
+                <p>JS/FE 2020Q3</p>
               </div>
             </div>
             <div class="timeline-item">
@@ -279,7 +281,7 @@
               </div>
               <div class="point"></div>
               <div class="timeline-description">
-                <p>Educational center of HTP "IT Academy"</p>
+                <h6>Educational center of HTP "IT Academy"</h6>
                 <p>Web-technologies</p>
               </div>
             </div>
@@ -289,7 +291,7 @@
               </div>
               <div class="point"></div>
               <div class="timeline-description">
-                <p>Educational center of HTP "IT Academy"</p>
+                <h6>Educational center of HTP "IT Academy"</h6>
                 <p>Computer Science</p>
               </div>
             </div>
@@ -299,57 +301,25 @@
               </div>
               <div class="point"></div>
               <div class="timeline-description">
-                <p>Yanka Kupala State University of Grodno</p>
-                <p>Finance, Finance and Credit faculty</p>
+                <h6>Yanka Kupala State University of Grodno</h6>
+                <p>Finance and Credit faculty</p>
               </div>
             </div>
-            <span class="timeline-line"></span>
           </div>
         </section>
-        <!-- <section class="education" id="education">
-          <h3>Education</h3>
-          <h4>Yanka Kupala State University of Grodno</h4>
-          <p>2004 - 2009</p>
-          <p>Finance, Finance and Credit faculty,</p>
-          <p>5th year study</p>
-        </section>
-        <section class="add_education" id="add_education"> -->
-          <!-- <h3>Additional Education</h3>
-          <h4>Educational center of HTP "IT Academy"</h4>
-          <ul>
-            <li>
-              <p>Web Application Development With Javascript, 2021</p>
-            </li> -->
-            <!-- <li>
-              <p>Web-technologies, 2020</p>
-            </li>
-            <li>
-              <p>Computer Science, 2020</p>
-            </li>
-          </ul> -->
-          <!-- <h4>The Rolling Scopes School</h4>
-          <ul>
-            <li>
-              <p>JavaScript/Front-end 2021Q3, 2021</p>
-            </li>
-            <li>
-              <p>JavaScript/Front-end 2020Q3, 2020</p>
-            </li>
-          </ul> -->
-        <!-- </section> -->
         <section class="code" id="code">
           <h3>Code example</h3>
           <pre>
             <code>
-  function getMiddle(s) {
-    let length = s.split('').length;
-    let arr = s.split('');
-    if (length % 2 === 0) {
-      return arr.splice(((length / 2) - 1), 2).join('');
-    } else {
-      return arr.splice(((length / 2) + 0.5) - 1, 1).join('');
-    }
+function getMiddle(s) {
+  let length = s.split('').length;
+  let arr = s.split('');
+  if (length % 2 === 0) {
+    return arr.splice(((length / 2) - 1), 2).join('');
+  } else {
+    return arr.splice(((length / 2) + 0.5) - 1, 1).join('');
   }
+}
             </code>
           </pre>
         </section>
